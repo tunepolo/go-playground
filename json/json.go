@@ -32,4 +32,12 @@ func main() {
 	}
 
 	fmt.Println(string(b))
+
+	var unmarshalPerson Person
+	err = json.Unmarshal(b, &unmarshalPerson)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(unmarshalPerson)
 }
